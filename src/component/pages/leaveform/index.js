@@ -33,8 +33,8 @@ export const LeaveForm = () => {
     console.log(end_date, "end_date")
 
     const [initialValues, setInitialValues] = useState({
-        firstName: "",
-        lastName: "",
+        first_name: "",
+        last_name: "",
         email: "",
         reason: "",
         user_id: "1",
@@ -44,8 +44,8 @@ export const LeaveForm = () => {
 
     //   let validation = 
     // const validationSchema = Yup.object().shape({
-    //     firstName: Yup.string().required("firstName Required"),
-    //     lastName: Yup.string().required("lastName  Required"),
+    //     first_name: Yup.string().required("first_name Required"),
+    //     last_name: Yup.string().required("last_name  Required"),
     //     email: Yup.string().required("email Required"),
     //     start_date: Yup.string().required("start_date Required"),
     //     end_date: Yup.mixed().required("end_date Required"),
@@ -113,13 +113,13 @@ export const LeaveForm = () => {
                                 <Grid item xs={12} sm={6}>
                                     <TextField
                                         autoComplete="given-name"
-                                        name="firstName"
+                                        name="first_name"
                                         required
                                         fullWidth
-                                        id="firstName"
+                                        id="first_name"
                                         label="First Name"
                                         autoFocus
-                                        value={formik.values.firstName}
+                                        value={formik.values.first_name}
                                         onChange={formik.handleChange}
 
                                     />
@@ -129,11 +129,11 @@ export const LeaveForm = () => {
                                     <TextField
                                         required
                                         fullWidth
-                                        id="lastName"
+                                        id="last_name"
                                         label="Last Name"
-                                        name="lastName"
+                                        name="last_name"
                                         autoComplete="family-name"
-                                        value={formik.values.lastName}
+                                        value={formik.values.last_name}
                                         onChange={formik.handleChange}
                                     />
                                 </Grid>
@@ -154,7 +154,6 @@ export const LeaveForm = () => {
 
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DatePicker
-
                                             name="start_date"
                                             label="Start Date"
                                             value={start_date}
